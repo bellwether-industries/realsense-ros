@@ -118,9 +118,9 @@ def launch_setup(context, params, param_name_suffix=''):
     # Get list of supported parameters
     supported_params = set(param['name'] for param in configurable_parameters)
     
-    # Check for unsupported parameters in command line arguments
-    # Warn for any launch arguments not in supported_params
-    for param_name in context.launch_configurations.keys():
+    # Warn only for parameters this launch file passes to the node (not unrelated
+    # parent launch args such as bringup's fcu_url / mavros_pluginlists).
+    for param_name in params.keys():
         if param_name not in supported_params:
             print(f"\033[33mWarning: Parameter '{param_name}' is not supported. Supported parameters are:\n{sorted(supported_params)}\033[0m")
     
