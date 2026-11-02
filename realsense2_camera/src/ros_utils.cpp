@@ -53,8 +53,10 @@ std::string rs2_to_ros(std::string rs2_name)
         {"Pointcloud (SSE3)", "Pointcloud"},
         {"Pointcloud (CUDA)", "Pointcloud"},
         {"Pointcloud (Neon)", "Pointcloud"},
+        {"Pointcloud (NEON)", "Pointcloud"},
         {"Align (SSE3)", "Align Depth"},
-    {"Align (CUDA)", "Align Depth"},
+        {"Align (CUDA)", "Align Depth"},
+        {"Align (NEON)", "Align Depth"},
         {"Depth to Disparity", "disparity filter"},
         {"Depth Visualization", "colorizer"}
     };
